@@ -4,12 +4,12 @@
  * @license http://yii2metronic.icron.org/license.html
  */
 
-namespace dlds\metronic\widgets;
+namespace DevGroup\Metronic\widgets;
 
 use yii\helpers\Url;
 use \yii\helpers\ArrayHelper;
-use dlds\metronic\bundles\ListViewAsset;
-use dlds\metronic\bundles\ListViewSortableAsset;
+use DevGroup\Metronic\bundles\ListViewAsset;
+use DevGroup\Metronic\bundles\ListViewSortableAsset;
 
 class ListView extends \yii\widgets\ListView {
 

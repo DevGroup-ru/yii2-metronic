@@ -5,9 +5,9 @@
  * @license http://yii2metronic.icron.org/license.html
  */
 
-namespace dlds\metronic\widgets;
+namespace DevGroup\Metronic\widgets;
 
-use dlds\metronic\Metronic;
+use DevGroup\Metronic\Metronic;
 use yii\base\InvalidConfigException;
 use yii\helpers\Html;
 use yii\helpers\ArrayHelper;
@@ -96,7 +96,7 @@ class Menu extends \yii\widgets\Menu {
      * The token `{arrow}` will be replaced with the corresponding link arrow.
      * This property will be overridden by the `template` option set in individual menu items via [[items]].
      */
-    public $linkTemplate = '<a href="{url}">{icon}{label}{badge}{arrow}</a>';
+    public $linkTemplate = '<a href="{url}" class="nav-link nav-toggle">{icon}{label}{badge}{arrow}</a>';
 
     /**
      * @var bool Indicates whether menu is visible.
@@ -141,7 +141,7 @@ class Menu extends \yii\widgets\Menu {
         {
             $options = array_merge($this->itemOptions, ArrayHelper::getValue($item, 'options', []));
             $tag = ArrayHelper::remove($options, 'tag', 'li');
-            $class = [];
+            $class = ['nav-item'];
             if ($item['active'])
             {
                 $class[] = $this->activeCssClass;

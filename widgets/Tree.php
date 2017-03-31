@@ -4,11 +4,11 @@
  * @license http://yii2metronic.icron.org/license.html
  */
 
-namespace dlds\metronic\widgets;
+namespace DevGroup\Metronic\widgets;
 
 use yii\helpers\Html;
 use \yii\helpers\ArrayHelper;
-use dlds\metronic\bundles\TreeAsset;
+use DevGroup\Metronic\bundles\TreeAsset;
 
 class Tree extends InputWidget {
 
@@ -105,7 +105,7 @@ class Tree extends InputWidget {
      */
     public function run()
     {
-        $builder = \dlds\metronic\builders\TreeBuilder::instance($this->items, array(
+        $builder = \DevGroup\Metronic\builders\TreeBuilder::instance($this->items, array(
                 'treeTag' => $this->listTag,
                 'itemTag' => $this->itemTag,
                 'levelAttr' => $this->levelAttr,

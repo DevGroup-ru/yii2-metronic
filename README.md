@@ -36,15 +36,15 @@ Edit your ```config/web.php``` configuration file and add the metronic component
 ```
 'components' => [
     'metronic'=>[
-        'class'=>'dlds\metronic\Metronic',
+        'class'=>'DevGroup\Metronic\Metronic',
         'resources'=>'[path to my web]/web/metronic/assets/theme/assets',
-        'style'=>\dlds\metronic\Metronic::STYLE_MATERIAL,
-        'theme'=>\dlds\metronic\Metronic::THEME_LIGHT,
-        'layoutOption'=>\dlds\metronic\Metronic::LAYOUT_FLUID,
-        'headerOption'=>\dlds\metronic\Metronic::HEADER_FIXED,
-        'sidebarPosition'=>\dlds\metronic\Metronic::SIDEBAR_POSITION_LEFT,
-        'sidebarOption'=>\dlds\metronic\Metronic::SIDEBAR_MENU_ACCORDION,
-        'footerOption'=>\dlds\metronic\Metronic::FOOTER_FIXED,
+        'style'=>\DevGroup\Metronic\Metronic::STYLE_MATERIAL,
+        'theme'=>\DevGroup\Metronic\Metronic::THEME_LIGHT,
+        'layoutOption'=>\DevGroup\Metronic\Metronic::LAYOUT_FLUID,
+        'headerOption'=>\DevGroup\Metronic\Metronic::HEADER_FIXED,
+        'sidebarPosition'=>\DevGroup\Metronic\Metronic::SIDEBAR_POSITION_LEFT,
+        'sidebarOption'=>\DevGroup\Metronic\Metronic::SIDEBAR_MENU_ACCORDION,
+        'footerOption'=>\DevGroup\Metronic\Metronic::FOOTER_FIXED,
 
     ],
 ]
@@ -82,7 +82,7 @@ I suggest also to configure the assetManager. My actual configuration is this:
                 ]
             ],
             
-            'dlds\metronic\bundles\ThemeAsset' => [
+            'DevGroup\Metronic\bundles\ThemeAsset' => [
                 'addons'=>[
                     'default/login'=>[
                         'css'=>[
@@ -116,8 +116,8 @@ Here is my sample ```views/layout/main.php```:
 /* @var $content string */
 
 use yii\helpers\Html;
-use dlds\metronic\helpers\Layout;
-use dlds\metronic\Metronic;
+use DevGroup\Metronic\helpers\Layout;
+use DevGroup\Metronic\Metronic;
 
 $asset = Metronic::registerThemeAsset($this);
 

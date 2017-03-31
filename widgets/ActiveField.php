@@ -6,7 +6,7 @@
  */
 
 
-namespace dlds\metronic\widgets;
+namespace DevGroup\Metronic\widgets;
 
 use yii\helpers\ArrayHelper;
 use yii\helpers\Html;
@@ -29,6 +29,23 @@ class ActiveField extends \yii\widgets\ActiveField {
     public function end()
     {
         return Html::endTag(isset($this->options['tag']) ? $this->options['tag'] : 'div') . "\n";
+    }
+
+    public function checkbox($options = [], $enclosedByLabel = true)
+    {
+        $options['label'] = false;
+        if ($this->form->type === ActiveForm::TYPE_HORIZONTAL) {
+            $this->parts['{label}'] = '<div class="col-md-3"></div>';
+        } else {
+            $this->parts['{label}'] = '';
+        }
+
+
+        $this->parts['{input}'] = Html::activeCheckbox($this->model, $this->attribute, $options) .
+            Html::activeLabel($this->model, $this->attribute, [
+                'class' => 'control-label',
+            ]);
+        return $this;
     }
 
     /**

@@ -5,7 +5,7 @@
  * @license http://yii2metronic.icron.org/license.html
  */
 
-namespace dlds\metronic\widgets;
+namespace DevGroup\Metronic\widgets;
 
 use yii\base\Model;
 use yii\helpers\ArrayHelper;
@@ -26,6 +26,7 @@ class ActiveForm extends \yii\widgets\ActiveForm {
     const TYPE_VERTICAL = 'vertical';
     const TYPE_INLINE = 'inline';
 
+    public $fieldClass = ActiveField::class;
     /**
      * @var bool Indicates whether form rows is separated.
      */

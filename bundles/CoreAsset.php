@@ -5,7 +5,7 @@
  * @license http://www.digitaldeals.cz/license/
  */
 
-namespace dlds\metronic\bundles;
+namespace DevGroup\Metronic\bundles;
 
 class CoreAsset extends BaseAssetBundle {
 
@@ -13,7 +13,7 @@ class CoreAsset extends BaseAssetBundle {
      * @var array depended packages
      */
     public $depends = [
-        'dlds\metronic\bundles\FontAsset',
+        'DevGroup\Metronic\bundles\FontAsset',
         'yii\bootstrap\BootstrapPluginAsset',
     ];
 
@@ -43,8 +43,8 @@ class CoreAsset extends BaseAssetBundle {
         // 'global/plugins/jquery.min.js',
         'global/plugins/jquery-migrate.min.js',
         'global/plugins/jquery-ui/jquery-ui.min.js',
-        // 'global/plugins/bootstrap/js/bootstrap.min.js',
-        'global/plugins/jquery-slimscroll/jquery.slimscroll.min.js',
+         'global/plugins/js.cookie.min.js',
+//        'global/plugins/jquery-slimscroll/jquery.slimscroll.min.js',
         'global/plugins/jquery.blockui.min.js',
         'global/plugins/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js',
         'global/plugins/bootstrap-switch/js/bootstrap-switch.min.js',

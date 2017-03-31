@@ -5,7 +5,7 @@
  * Time: 14.51
  */
 
-namespace dlds\metronic\widgets;
+namespace DevGroup\Metronic\widgets;
 
 use yii\helpers\Html;
 

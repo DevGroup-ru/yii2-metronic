@@ -5,15 +5,19 @@
  * Date: 26/07/16
  * Time: 05:49
  */
-namespace dlds\metronic\bundles;
+namespace DevGroup\Metronic\bundles;
 
 use yii\web\AssetBundle;
 
 class BaseAssetBundle extends AssetBundle {
     /**
-     * @var string source assets path
+     * @var string
      */
-    public $sourcePath = '@dlds/metronic/assets';
+    public $basePath = '@webroot/metronic';
+    /**
+     * @var string
+     */
+    public $baseUrl = '@web/metronic';
 
     public function init()
     {

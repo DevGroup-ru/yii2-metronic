@@ -5,7 +5,7 @@
  * @license http://yii2metronic.icron.org/license.html
  */
 
-namespace dlds\metronic\widgets;
+namespace DevGroup\Metronic\widgets;
 
 use Yii;
 use yii\base\InvalidConfigException;

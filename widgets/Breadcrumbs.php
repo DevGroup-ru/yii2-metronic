@@ -4,7 +4,7 @@
  * @license http://yii2metronic.icron.org/license.html
  */
 
-namespace dlds\metronic\widgets;
+namespace DevGroup\Metronic\widgets;
 
 use yii\base\InvalidConfigException;
 use yii\helpers\ArrayHelper;
@@ -53,6 +53,8 @@ class Breadcrumbs extends \yii\widgets\Breadcrumbs
      * will be replaced with the actual HTML link for each active item.
      */
     public $activeItemTemplate = "<li>{link}</li>\n";
+
+    public $options = ['class' => ''];
     /**
      * @var array|string
      */

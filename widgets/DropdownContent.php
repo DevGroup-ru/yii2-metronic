@@ -4,7 +4,7 @@
  * @license http://yii2metronic.icron.org/license.html
  */
 
-namespace dlds\metronic\widgets;
+namespace DevGroup\Metronic\widgets;
 
 use yii\bootstrap\Button as BButton;
 use yii\bootstrap\ButtonDropdown;

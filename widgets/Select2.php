@@ -4,12 +4,12 @@
  * @license http://yii2metronic.icron.org/license.html
  */
 
-namespace dlds\metronic\widgets;
+namespace DevGroup\Metronic\widgets;
 
 use yii\base\InvalidConfigException;
 use yii\helpers\Html;
 
-use dlds\metronic\bundles\Select2Asset;
+use DevGroup\Metronic\bundles\Select2Asset;
 
 /**
  * Select2 renders Select2 component.

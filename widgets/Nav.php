@@ -4,14 +4,14 @@
  * @license http://yii2metronic.icron.org/license.html
  */
 
-namespace dlds\metronic\widgets;
+namespace DevGroup\Metronic\widgets;
 
 use Yii;
 use yii\base\InvalidConfigException;
 use yii\helpers\ArrayHelper;
 use yii\helpers\Html;
 use yii\helpers\Url;
-use dlds\metronic\Metronic;
+use DevGroup\Metronic\Metronic;
 
 /**
  * Nav renders a nav HTML component.
@@ -110,6 +110,8 @@ class Nav extends \yii\bootstrap\Nav {
      * @var string navbar holder
      */
     public $navbar = self::NAVBAR_DEFAULT;
+
+    public $encodeLabels = false;
 
     /**
      * Initializes the widget.

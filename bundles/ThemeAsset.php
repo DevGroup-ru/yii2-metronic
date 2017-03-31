@@ -1,14 +1,14 @@
 <?php
 /**
  * @link http://www.digitaldeals.cz/
- * @copyright Copyright (c) 2014 Digital Deals s.r.o. 
+ * @copyright Copyright (c) 2014 Digital Deals s.r.o.
  * @license http://www.digitaldeals.cz/license/
  */
 
-namespace dlds\metronic\bundles;
+namespace DevGroup\Metronic\bundles;
 
 use Yii;
-use dlds\metronic\Metronic;
+use DevGroup\Metronic\Metronic;
 
 class ThemeAsset extends BaseAssetBundle {
 
@@ -16,17 +16,16 @@ class ThemeAsset extends BaseAssetBundle {
      * @var array depended bundles
      */
     public $depends = [
-        'dlds\metronic\bundles\CoreAsset',
-        'dlds\metronic\bundles\StyleBasedAsset',
+        'DevGroup\Metronic\bundles\CoreAsset',
+        'DevGroup\Metronic\bundles\StyleBasedAsset',
     ];
 
     /**
      * @var array css assets
      */
     public $css = [
-        'layouts/{version}/css/layout.css',
+        'layouts/{version}/css/layout.min.css',
         'layouts/{version}/css/themes/{theme}.css',
-        'layouts/{version}/css/custom.css',
     ];
 
     /**
@@ -77,6 +76,7 @@ class ThemeAsset extends BaseAssetBundle {
     private function _handleDynamicCss()
     {
         $component = Metronic::getComponent();
+
 
         if ($component)
         {

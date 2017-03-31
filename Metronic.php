@@ -1,17 +1,17 @@
 <?php
 /**
  * @link http://www.digitaldeals.cz/
- * @copyright Copyright (c) 2014 Digital Deals s.r.o. 
+ * @copyright Copyright (c) 2014 Digital Deals s.r.o.
  * @license http://www.digitaldeals.cz/license/
  */
 
-namespace dlds\metronic;
+namespace DevGroup\Metronic;
 
-use dlds\metronic\bundles\IonRangeSliderAsset;
+use DevGroup\Metronic\bundles\IonRangeSliderAsset;
 use Yii;
 use yii\web\AssetBundle;
 use yii\base\InvalidConfigException;
-use dlds\metronic\bundles\ThemeAsset;
+use DevGroup\Metronic\bundles\ThemeAsset;
 
 /**
  * This is the class of Metronic Component
@@ -22,11 +22,6 @@ class Metronic extends \yii\base\Component {
      * @var AssetBundle
      */
     public static $assetsBundle;
-
-    /**
-     * Assets link
-     */
-    const ASSETS_LINK = __DIR__.'/assets';
 
     /**
      * Theme
@@ -169,7 +164,7 @@ class Metronic extends \yii\base\Component {
     /**
      * @var string version
      */
-    public $version = self::VERSION_4;
+    public $version = self::VERSION_1;
 
     /**
      * @var string Theme
@@ -234,27 +229,12 @@ class Metronic extends \yii\base\Component {
      */
     public function init()
     {
-        $htmlClass = \yii\helpers\ArrayHelper::getValue(Yii::$classMap, 'yii\helpers\Html', null);
-
-        if ($htmlClass != self::CLASS_HTML)
-        {
-            throw new InvalidConfigException('Default Yii2 Html helper class is not allowed. For using Metronic theme put Yii::$classMap[\'yii\\helpers\\Html\'] = \''.self::CLASS_HTML.'\'; into your bootstrap.php');
-        }
-
         if (self::SIDEBAR_FIXED === $this->sidebarOption && self::SIDEBAR_MENU_HOVER === $this->sidebarMenu)
         {
             throw new InvalidConfigException('Hover Sidebar Menu is not compatible with Fixed Sidebar Mode. Select Default Sidebar Mode Instead.');
         }
 
-        if (!$this->resources)
-        {
-            throw new InvalidConfigException('You have to specify resources locations to be able to create symbolic links. Specify "admin" and "global" theme folder locations.');
-        }
 
-        if (!is_link(self::ASSETS_LINK) && !is_dir(self::ASSETS_LINK))
-        {
-            symlink($this->resources, self::ASSETS_LINK);
-        }
     }
 
     public function parseAssetsParams(&$string)
@@ -272,14 +252,8 @@ class Metronic extends \yii\base\Component {
      */
     public static function getComponent()
     {
-        try
-        {
-            return \Yii::$app->get(static::$componentName);
-        }
-        catch (InvalidConfigException $ex)
-        {
-            return null;
-        }
+        return \Yii::$app->get('metronic');
+
     }
 
     /**
@@ -299,7 +273,7 @@ class Metronic extends \yii\base\Component {
 
     /**
      * Register Theme Asset
-     * @param $view View
+     * @param $view \yii\web\View
      * @return AssetBundle
      */
     public static function registerThemeAsset($view)

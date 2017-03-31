@@ -4,7 +4,7 @@
  * @license http://yii2metronic.icron.org/license.html
  */
 
-namespace dlds\metronic\widgets;
+namespace DevGroup\Metronic\widgets;
 
 use yii\helpers\Html;
 
@@ -19,7 +19,7 @@ use yii\helpers\Html;
  *     'round'
  * ]);
  *
- * @package dlds\metronic\widgets
+ * @package DevGroup\Metronic\widgets
  */
 class Badge extends  \yii\base\Widget
 {

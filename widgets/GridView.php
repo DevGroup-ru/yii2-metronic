@@ -4,12 +4,12 @@
  * @license http://yii2metronic.icron.org/license.html
  */
 
-namespace dlds\metronic\widgets;
+namespace DevGroup\Metronic\widgets;
 
 use yii\helpers\Html;
 use yii\helpers\Url;
 use yii\helpers\ArrayHelper;
-use dlds\metronic\bundles\GridViewSortableAsset;
+use DevGroup\Metronic\bundles\GridViewSortableAsset;
 
 class GridView extends \kartik\grid\GridView {
 

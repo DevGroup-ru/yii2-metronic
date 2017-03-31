@@ -1,14 +1,14 @@
 <?php
 /**
  * @link http://www.digitaldeals.cz/
- * @copyright Copyright (c) 2014 Digital Deals s.r.o. 
+ * @copyright Copyright (c) 2014 Digital Deals s.r.o.
  * @license http://www.digitaldeals.cz/license/
  */
 
-namespace dlds\metronic\bundles;
+namespace DevGroup\Metronic\bundles;
 
 use yii\helpers\ArrayHelper;
-use dlds\metronic\Metronic;
+use DevGroup\Metronic\Metronic;
 
 class StyleBasedAsset extends BaseAssetBundle {
 
@@ -16,7 +16,7 @@ class StyleBasedAsset extends BaseAssetBundle {
      * @var array depended bundles
      */
     public $depends = [
-        'dlds\metronic\bundles\CoreAsset',
+        'DevGroup\Metronic\bundles\CoreAsset',
     ];
 
     /**
@@ -29,8 +29,8 @@ class StyleBasedAsset extends BaseAssetBundle {
      */
     private $styleBasedCss = [
         Metronic::STYLE_SQUARE => [
-            'global/css/components.css',
-            'global/css/plugins.css',
+            'global/css/components.min.css',
+            'global/css/plugins.min.css',
         ],
         Metronic::STYLE_ROUNDED => [
             'global/css/components-rounded.css',

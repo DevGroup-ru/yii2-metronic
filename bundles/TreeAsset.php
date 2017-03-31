@@ -5,7 +5,7 @@
  * @license http://www.digitaldeals.cz/license/
  */
 
-namespace dlds\metronic\bundles;
+namespace DevGroup\Metronic\bundles;
 
 
 class TreeAsset extends BaseAssetBundle {
@@ -25,7 +25,7 @@ class TreeAsset extends BaseAssetBundle {
      * @var array depends on
      */
     public $depends = [
-        'dlds\metronic\bundles\CoreAsset',
+        'DevGroup\Metronic\bundles\CoreAsset',
     ];
 
 }

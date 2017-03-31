@@ -5,8 +5,8 @@
  * @license http://www.digitaldeals.cz/license/
  */
 
-namespace dlds\metronic\bundles;
-use dlds\metronic\Metronic;
+namespace DevGroup\Metronic\bundles;
+use DevGroup\Metronic\Metronic;
 
 /**
  * IonRangeSliderAsset for slider widget.
@@ -29,7 +29,7 @@ class IonRangeSliderAsset extends BaseAssetBundle {
     ];
 
     public $depends = [
-        'dlds\metronic\bundles\CoreAsset',
+        'DevGroup\Metronic\bundles\CoreAsset',
     ];
 
     public function init()

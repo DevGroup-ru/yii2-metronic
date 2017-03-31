@@ -5,7 +5,7 @@
  * @license http://yii2metronic.icron.org/license.html
  */
 
-namespace dlds\metronic\widgets;
+namespace DevGroup\Metronic\widgets;
 
 use yii\base\InvalidConfigException;
 use yii\helpers\Html;
@@ -154,13 +154,14 @@ class HorizontalMenu extends Menu {
      */
     public $dropdownLinkMegaTemplate = '<a data-hover="dropdown" data-close-others="true" class="dropdown-toggle" href="{url}">{label}</a>';
 
+    public $menuClass = 'page-actions';
     /**
      * Renders the menu.
      */
     public function run()
     {
         Html::addCssClass($this->options, 'nav navbar-nav');
-        echo Html::beginTag('div', ['class' => 'page-actions']);
+        echo Html::beginTag('div', ['class' => $this->menuClass]);
         if ($this->route === null && Yii::$app->controller !== null)
         {
             $this->route = Yii::$app->controller->getRoute();
@@ -181,9 +182,9 @@ class HorizontalMenu extends Menu {
         {
             // do not render seacrh box if not visible
             if ($this->search['visible'])
-                $data[] = Html::tag('li', $this->renderSearch());            
-        } 
-        $data[] = Html::tag('li', $this->renderSearch());
+                $data[] = Html::tag('li', $this->renderSearch());
+        }
+
         echo Html::tag($tag, implode("\n", $data), $options);
         echo Html::endTag('div');
     }

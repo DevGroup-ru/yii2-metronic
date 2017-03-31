@@ -4,7 +4,7 @@
  * @license http://www.digitaldeals.cz/license/
  */
 
-namespace  dlds\metronic\bundles;
+namespace  DevGroup\Metronic\bundles;
 
 /**
  * Select2Asset for select2 widget.
@@ -23,6 +23,6 @@ class Select2Asset extends BaseAssetBundle
 
 
     public $depends = [
-        'dlds\metronic\bundles\CoreAsset',
+        'DevGroup\Metronic\bundles\CoreAsset',
     ];
 }

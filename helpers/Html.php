@@ -8,7 +8,7 @@
 namespace yii\helpers;
 
 use yii\helpers\ArrayHelper;
-use dlds\metronic\bundles\Select2Asset;
+use DevGroup\Metronic\bundles\Select2Asset;
 
 /**
  * Html helper
@@ -19,7 +19,7 @@ class Html extends \yii\helpers\BaseHtml {
      * Clases names
      */
     const CLASS_SELECT2ME = 'select2me';
-    
+
     /**
      * Generates a link tag that refers to an external CSS file.
      * @param array|string $url the URL of the external CSS file. This parameter will be processed by [[\yii\helpers\Url::to()]].

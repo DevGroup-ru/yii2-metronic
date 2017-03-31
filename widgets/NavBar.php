@@ -5,9 +5,9 @@
  * @license http://yii2metronic.icron.org/license.html
  */
 
-namespace dlds\metronic\widgets;
+namespace DevGroup\Metronic\widgets;
 
-use dlds\metronic\Metronic;
+use DevGroup\Metronic\Metronic;
 use yii\helpers\Html;
 use Yii;
 
@@ -48,7 +48,7 @@ class NavBar extends \yii\bootstrap\NavBar {
      * @var string the url to logo of the brand.
      */
     public $brandWrapperOptions;
-    
+
     /**
      * Initializes the widget.
      */
@@ -104,7 +104,20 @@ class NavBar extends \yii\bootstrap\NavBar {
 
         $this->brandOptions['href'] = $this->brandUrl;
 
-        return Html::tag('a', $content, $this->brandOptions);
+        return
+        <<<html
+        <a href="javascript:;" class="menu-toggler responsive-toggler pull-left" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span></span>
+                    </a>
+html
+            .
+        Html::tag('a', $content, $this->brandOptions) .
+            <<<html
+<div class="menu-toggler sidebar-toggler">
+    <span></span>
+</div>
+html;
+;
     }
 
 }

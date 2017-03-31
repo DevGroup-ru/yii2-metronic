@@ -5,13 +5,13 @@
  * @license http://yii2metronic.icron.org/license.html
  */
 
-namespace dlds\metronic\widgets;
+namespace DevGroup\Metronic\widgets;
 
 use Yii;
 use yii\helpers\Html;
 use yii\helpers\Json;
 use yii\web\View;
-use dlds\metronic\bundles\IonRangeSliderAsset;
+use DevGroup\Metronic\bundles\IonRangeSliderAsset;
 
 /**
  *  IonRangeSlider renders ionRangeSlider widget.
