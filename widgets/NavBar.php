@@ -65,7 +65,6 @@ class NavBar extends \yii\bootstrap\NavBar {
         Html::addCssClass($this->brandWrapperOptions, 'page-logo');
         echo Html::beginTag('div', $this->brandWrapperOptions);
         echo $this->renderBrand();
-        echo $this->renderToggleButton();
         echo Html::endTag('div');
     }
 
